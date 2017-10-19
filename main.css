@@ -1,0 +1,34 @@
+*
+{
+	margin-right: 0;
+	padding: 0;
+}
+.box{
+	width: 400px;
+	height: 200px;
+}
+img{
+	width: 400px;
+	height: 200px;
+}
+.back{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	transform: perspective(900px) rotateY(180deg);
+	transition: transform 2s linear;
+	backface-visibility: hidden;
+}
+.front{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	transition: transform 2s linear;
+	backface-visibility: hidden;
+}
+.box:hover > .front{
+	transform: perspective(900px) rotateY(180deg);
+}
+.box:hover > .back{
+	transform: perspective(900px) rotateY(0deg);
+}
